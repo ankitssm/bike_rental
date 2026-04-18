@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RideSpare | Bike Rental</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">RideSpare</div>
+    <nav>
+      <button id="nav-login" class="nav-button active">Login</button>
+      <button id="nav-book" class="nav-button">Book Bike</button>
+      <button id="nav-summary" class="nav-button">Summary</button>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section id="login-section" class="panel active-panel">
+      <div class="panel-card">
+        <div class="panel-tag">Secure access</div>
+        <h1>Welcome to RideSpare</h1>
+        <p>Login to reserve a bike and start your next adventure.</p>
+        <form id="login-form" class="form-grid">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required />
+
+          <button type="submit" class="button primary">Login</button>
+        </form>
+        <div id="login-feedback" class="feedback"></div>
+      </div>
+    </section>
+
+    <section id="booking-section" class="panel">
+      <div class="panel-card">
+        <div class="panel-tag">Reserve a ride</div>
+        <h1>Choose and book your bike</h1>
+        <p>Pick your perfect ride from our premium fleet and set up your rental details.</p>
+
+        <form id="booking-form" class="form-grid">
+          <label for="bike-type">Select Bike</label>
+          <select id="bike-type" required>
+            <option value="Bullet Classic">Bullet Classic</option>
+            <option value="Pulsar 150">Pulsar 150</option>
+            <option value="Scooty Pep+">Scooty Pep+</option>
+            <option value="Cruiser Tour">Cruiser Tour</option>
+            <option value="MTB Ranger">MTB Ranger</option>
+            <option value="Electric Glide">Electric Glide</option>
+            <option value="Sport Racer">Sport Racer</option>
+            <option value="Folding Commuter">Folding Commuter</option>
+            <option value="Adventure Trek">Adventure Trek</option>
+            <option value="Cargo Carrier">Cargo Carrier</option>
+          </select>
+
+          <label for="pickup-date">Pickup date</label>
+          <input type="date" id="pickup-date" required />
+
+          <label for="pickup-time">Pickup time</label>
+          <input type="time" id="pickup-time" required />
+
+          <label for="return-date">Return date</label>
+          <input type="date" id="return-date" required />
+
+          <label for="return-time">Return time</label>
+          <input type="time" id="return-time" required />
+
+          <label for="location">Pickup location</label>
+          <input type="text" id="location" placeholder="Downtown Hub" required />
+
+          <button type="submit" class="button primary">Confirm Booking</button>
+        </form>
+        <div id="booking-feedback" class="feedback"></div>
+      </div>
+    </section>
+
+    <section id="summary-section" class="panel">
+      <div class="panel-card summary-card">
+        <div class="panel-tag">Booking details</div>
+        <h1>Booking Summary</h1>
+        <div class="summary-list">
+          <div><span>Customer:</span> <strong id="summary-name">-</strong></div>
+          <div><span>Bike:</span> <strong id="summary-bike">-</strong></div>
+          <div><span>Pickup:</span> <strong id="summary-pickup">-</strong></div>
+          <div><span>Return:</span> <strong id="summary-return">-</strong></div>
+          <div><span>Location:</span> <strong id="summary-location">-</strong></div>
+          <div><span>Duration:</span> <strong id="summary-duration">-</strong></div>
+          <div><span>Estimated rate:</span> <strong id="summary-rate">-</strong></div>
+        </div>
+        <p class="summary-note">RideSpare estimates your rental cost and sends a confirmation email after booking.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>RideSpare Bike Rentals • Modern urban bike rental experience</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
